@@ -1,0 +1,27 @@
+.section {
+  @include wrapper;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 200px;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+
+    @include text(50px, 60px, 700);
+  }
+
+  &__text {
+    margin: 0;
+
+    @include text(25px, 35px, 400);
+  }
+
+  &__subtitle {
+    margin: 0;
+
+    @include text(40px, 50px, 700);
+  }
+}

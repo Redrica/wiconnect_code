@@ -1,0 +1,89 @@
+// list with yellow bullets
+
+.list {
+  padding: 0;
+  list-style: none;
+  text-align: left;
+
+  &__item {
+    @include text(20px, 30px, 400);
+
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 55px;
+
+    @include tablet {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.4em;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+      padding-left: 40px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 4px;
+      left: -3px;
+      content: "";
+      width: 30px;
+      height: 20px;
+      background: url("../img/bullit.svg") no-repeat center center;
+      background-size: contain;
+
+      @include mobile {
+        top: 0;
+        width: 25px;
+        height: 17px;
+      }
+    }
+
+    &--car {
+      @include text(25px, 35px, 400);
+
+      padding-left: 72px;
+
+      @include tablet {
+        padding-left: 55px;
+        font-size: 20px;
+        line-height: 1.4em;
+      }
+
+      @include mobile {
+        padding-left: 40px;
+        font-size: 16px;
+      }
+
+      &::before {
+        top: 8px;
+        left: 2px;
+      }
+
+      &:first-child {
+        width: 26%;
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 18%;
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+
+      &:last-child {
+        width: 39.5%;
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

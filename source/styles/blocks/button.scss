@@ -1,0 +1,41 @@
+.button {
+  @include text(20px, 30px, 700);
+
+  display: block;
+  padding: 6px 10px 9px;
+  font-family: $circular;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: $charcoal;
+  border: none;
+  border-radius: 22px;
+  background-color: $white;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: transform 0.1s linear;
+
+  &:hover,
+  &:focus {
+    color: $yellow;
+    outline: none;
+  }
+
+  &--yellow {
+    background-color: $yellow;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+
+  &--big {
+    padding: 37px 30px 33px;
+    border-radius: 50px;
+
+    @include tablet {
+      padding: 25px;
+    }
+  }
+}

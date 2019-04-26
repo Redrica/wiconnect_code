@@ -1,0 +1,94 @@
+// text field styles
+
+// wrapper
+.input-field {
+  position: relative;
+  text-align: left;
+
+  // focus condition underline
+  &__decor {
+    position: absolute;
+    top: 49px;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: $charcoal;
+    transition: 0.3s linear;
+  }
+
+  // helper text
+  &__helper {
+    @include text(15px, 25px, 400);
+
+    display: none;
+    margin-bottom: 22px;
+    padding: 7px 0 0;
+    color: $red;
+    transition-duration: 0.3s;
+  }
+
+  // text field
+  &__input {
+    width: 100%;
+    height: 51px;
+    padding: 0;
+    font: inherit;
+    font-size: 20px;
+    line-height: 30px;
+    color: $charcoal;
+    border: none;
+    border-bottom: 2px solid $yellow;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+    transition: 0.3s;
+
+    &::-webkit-input-placeholder {
+      color: $charcoal;
+    }
+
+    &::-ms-input-placeholder {
+      color: $charcoal;
+    }
+
+    &:-ms-input-placeholder {
+      color: $charcoal;
+    }
+
+    &::placeholder {
+      color: $charcoal;
+    }
+
+    // input focus
+    &:focus {
+      border-color: transparent;
+      outline: none;
+    }
+
+    &:focus ~ .input-field__decor {
+      left: 0;
+      width: 100%;
+    }
+
+    &--error ~ .input-field__helper {
+      display: block;
+    }
+  }
+
+  &__link {
+    @include text(15px, 25px, 400);
+
+    position: absolute;
+    top: 13px;
+    right: 0;
+    text-decoration: none;
+    color: transparentize($charcoal, 0.7);
+
+    &:hover,
+    &:focus {
+      color: transparentize($charcoal, 0.4);
+      outline: none;
+    }
+  }
+}

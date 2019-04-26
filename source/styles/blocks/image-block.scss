@@ -1,0 +1,38 @@
+// styling for block of phone picture and description
+
+.image-block {
+  position: relative;
+
+  &__name {
+    @include text(20px, 30px, 400);
+
+    position: absolute;
+    top: 63px;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    min-height: 90px;
+    transform: translate(-50%, 0);
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__image {
+    margin-bottom: 51px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    @include text(15px, 1.2em, 400);
+
+    margin: 0;
+    color: transparentize($charcoal, 0.5);
+  }
+}

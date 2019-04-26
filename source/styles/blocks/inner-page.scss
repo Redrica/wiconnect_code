@@ -1,0 +1,521 @@
+// styling for pages SERVICES
+
+.inner-page {
+  &__header {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 49px;
+    background-color: $charcoal;
+
+    @include tablet {
+      min-height: 650px;
+      padding-top: 77px;
+      padding-bottom: 30px;
+    }
+
+    @include mobile {
+      min-height: 450px;
+      padding-top: 68px;
+      padding-bottom: 20px;
+    }
+
+    @include mobile-standard {
+      min-height: 520px;
+    }
+
+    &--ad {
+      background-image:
+        linear-gradient(to right, transparentize($charcoal, 0.3), transparentize($charcoal, 0.3)),
+        url("../img/bg-unsplash.jpg");
+      background-size: cover;
+
+      @include mobile {
+        background-image:
+          linear-gradient(to right, transparentize($charcoal, 0.3), transparentize($charcoal, 0.3)),
+          url("../img/bg-unsplash.jpg");
+        background-size: cover;
+        background-position: center 0;
+      }
+    }
+
+    &--vo {
+      background-image:
+        linear-gradient(to right, transparentize($charcoal, 0.3), transparentize($charcoal, 0.3)),
+        url("../img/venue_owners_bg-desktop.jpg");
+      background-size: cover;
+
+      @include mobile {
+        background-image:
+          linear-gradient(to right, transparentize($charcoal, 0.3), transparentize($charcoal, 0.3)),
+          url("../img/venue_owners_bg-mobile.jpg");
+        background-size: cover;
+        background-position: center 0;
+      }
+    }
+
+    &--mp {
+      background-image:
+        linear-gradient(to right, transparentize($charcoal, 0.3), transparentize($charcoal, 0.3)),
+        url("../img/msp_bg.jpg");
+      background-size: cover;
+
+      @include mobile {
+        background-image:
+          linear-gradient(to right, transparentize($charcoal, 0.3), transparentize($charcoal, 0.3)),
+          url("../img/msp_bg-mobile.jpg");
+        background-size: cover;
+        background-position: center 0;
+      }
+    }
+
+    &--car {
+      padding-bottom: 74px;
+      background-image:
+        linear-gradient(to right, transparentize($charcoal, 0.3), transparentize($charcoal, 0.3)),
+        url("../img/careers_b.jpg");
+      background-size: cover;
+
+      @include mobile {
+        padding-bottom: 20px;
+        background-image:
+          linear-gradient(to right, transparentize($charcoal, 0.3), transparentize($charcoal, 0.3)),
+          url("../img/careers_b_mobile.jpg");
+        background-size: cover;
+        background-position: center 0;
+      }
+    }
+
+    & .inner-page__title--header {
+      max-width: 760px;
+      margin-top: 100px;
+      margin-bottom: 59px;
+
+      @include tablet {
+        margin-top: 70px;
+      }
+
+      @include mobile {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__container {
+    @include wrapper;
+
+    padding: 0 40px 130px;
+    text-align: center;
+
+    @include tablet {
+      padding: 0 30px 80px;
+    }
+
+    @include mobile {
+      padding: 0 20px 50px;
+    }
+
+    &--header {
+      padding: 0 40px 0;
+
+      @include tablet {
+        padding: 0 30px 0;
+      }
+
+      @include mobile {
+        padding: 25px 20px 0;
+      }
+    }
+  }
+
+  &__title {
+    @include text(50px, 60px, 700);
+
+    margin: 0 auto;
+    color: $yellow;
+
+    @include tablet {
+      width: 75%;
+      margin-bottom: 65px;
+      font-size: 40px;
+      line-height: 1.2em;
+    }
+
+    @include mobile {
+      margin-bottom: 50px;
+      font-size: 28px;
+    }
+
+    &--dark {
+      color: $charcoal;
+    }
+  }
+
+  &__promo-text {
+    @include text(40px, 50px, 700);
+
+    margin: 91px auto 110px;
+    color: $yellow;
+
+    @include tablet {
+      width: 75%;
+      margin-top: 50px;
+      margin-bottom: 65px;
+      font-size: 30px;
+      line-height: 1.2em;
+    }
+
+    @include mobile {
+      margin-top: 0;
+      margin-bottom: 35px;
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    @include text(24px, 35px, 400);
+
+    max-width: 680px;
+    margin: 0 auto 60px;
+
+    @include tablet {
+      width: 75%;
+      margin-bottom: 40px;
+      font-size: 20px;
+      line-height: 1.4em;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    &--white {
+      color: $white;
+    }
+
+    &--narrow {
+      max-width: 500px;
+    }
+  }
+
+  &__lead {
+    @include text(30px, 40px, 700);
+
+    max-width: 680px;
+    margin: 110px auto 0;
+
+    @include tablet {
+      width: 75%;
+      margin-top: 90px;
+      margin-bottom: 50px;
+      font-size: 25px;
+      line-height: 1.4em;
+
+      @include mobile {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 35px;
+        font-size: 20px;
+      }
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__vo-features {
+    max-width: 1320px;
+    margin: 83px auto 144px;
+
+    @include tablet {
+      margin-top: 65px;
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__compare-table {
+    margin-top: 127px;
+
+    @include tablet {
+      margin-top: 70px;
+    }
+
+    @include mobile {
+      margin-top: 50px;
+    }
+  }
+
+  &__options {
+    max-width: 1174px;
+    margin: 98px auto 64px;
+
+    @include tablet {
+      max-width: none;
+      margin: 60px auto 50px;
+    }
+
+    @include mobile {
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -50px;
+
+    @include desktop-start {
+      margin-right: -40px;
+    }
+
+    @include tablet {
+      margin-right: -30px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
+  &__options-item {
+    width: 358px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    font-size: 25px;
+    font-weight: 400;
+    box-shadow: 0 8px 9px 0 rgba(0, 0, 0, 0.06);
+
+    @include tablet {
+      width: 270px;
+      margin-right: 30px;
+      margin-bottom: 35px;
+      font-size: 20px;
+      line-height: 1.4em;
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: 375px;
+      margin: 0 auto 30px;
+    }
+
+    &--wide {
+      width: 500px;
+    }
+  }
+
+  &__mp-features {
+    max-width: 1210px;
+    margin: 127px auto 28px;
+
+    @include tablet {
+      margin-top: 65px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__car-features {
+    max-width: 815px;
+    margin: 100px auto 87px;
+
+    @include tablet {
+      margin: 65px auto 0;
+
+      @include mobile {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1124px;
+    margin: 0 auto;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__link {
+    @include text(40px, 50px, 700);
+
+    position: relative;
+    display: inline-block;
+    padding: 0 10px 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.1s;
+
+    @include tablet {
+      padding-bottom: 10px;
+      font-size: 30px;
+      line-height: 1.2em;
+    }
+
+    @include mobile {
+      padding: 0 6px 7px;
+      font-size: 20px;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      outline: none;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: $yellow;
+
+      @include mobile {
+        height: 2px;
+      }
+    }
+  }
+
+  &--services {
+
+    & .inner-page__toggles {
+      transform: translateY(319px);
+
+      @include tablet {
+        transform: translateY(112px);
+      }
+
+      @include mobile {
+        margin: 0 auto;
+        transform: translateY(28px);
+      }
+    }
+
+    & .inner-page__title:not(.inner-page__title--header) {
+      max-width: 860px;
+      margin-top: 153px;
+      margin-bottom: 57px;
+
+      @include tablet {
+        margin-top: 80px;
+        margin-bottom: 40px;
+      }
+
+      @include mobile {
+        margin-top: 65px;
+        margin-bottom: 35px;
+      }
+    }
+
+    & .inner-page__text {
+      max-width: 620px;
+    }
+
+    & .inner-page__text--narrow {
+      max-width: 560px;
+    }
+
+    & .inner-page__container--main {
+      padding-top: 130px;
+
+      @include tablet {
+        padding-top: 70px;
+      }
+
+      @include mobile {
+        padding-top: 50px;
+      }
+
+      & .inner-page__title:first-child {
+        margin-top: 14px;
+      }
+    }
+
+    & .inner-page__lead {
+      max-width: 700px;
+    }
+  }
+
+  &--services-mp .inner-page__section:first-child {
+    position: relative;
+    margin-bottom: 234px;
+
+    @include tablet {
+      margin-bottom: 180px;
+    }
+
+    @include mobile {
+      margin-bottom: 130px;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -102px;
+      left: calc((100% - 100vw) / 2);
+      content: "";
+      width: 100vw;
+      height: 1px;
+      background-color: transparentize($charcoal, 0.8);
+
+      @include tablet {
+        bottom: -85px;
+        left: -30px;
+        width: calc(100% + 60px);
+      }
+
+      @include mobile {
+        bottom: -60px;
+        left: -20px;
+        width: calc(100% + 40px);
+      }
+    }
+  }
+
+  &--services-a {
+    // padding-top: 80px;
+
+    & .inner-page__toggles {
+      transform: translateY(319px);
+
+      @include tablet {
+        transform: translateY(112px);
+      }
+
+      @include mobile {
+        margin: 0 auto;
+        transform: translateY(28px);
+      }
+    }
+
+    & .inner-page__title {
+      // margin-top: 100px;
+      margin-bottom: 59px;
+    }
+
+    & .inner-page__link {
+      margin-top: 41px;
+      margin-bottom: 10px;
+
+      &--white {
+        color: $white;
+      }
+    }
+  }
+}

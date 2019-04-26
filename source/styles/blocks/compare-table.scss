@@ -1,0 +1,193 @@
+.compare-table {
+  display: flex;
+
+  @include tablet {
+    width: calc(100% + 60px);
+    transform: translateX(-30px);
+  }
+
+  @include mobile {
+    position: relative;
+    width: calc(100% + 40px);
+    transform: translateX(-20px);
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: "";
+      width: 70px;
+      height: 100%;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 20%, $white 80%, $white 100%);
+    }
+  }
+
+  &__option {
+    position: relative;
+    min-width: 410px;
+    border-collapse: collapse;
+    text-align: left;
+    border: none;
+
+    @include tablet {
+      width: 50%;
+      min-width: 225px;
+    }
+
+    @include mobile {
+      width: 40%;
+      min-width: 160px;
+    }
+
+    & tr {
+      height: 65px;
+    }
+
+    & tr:first-child {
+      height: 85px;
+    }
+
+    & tr:nth-child(2n) {
+      height: 60px;
+      background-color: transparentize($charcoal, 0.95);
+    }
+
+    & .compare-table__cell {
+      max-width: none;
+    }
+
+    &::after {
+      position: absolute;
+      top: 33px;
+      right: -16.5%;
+      content: "";
+      width: 1px;
+      height: 445px;
+      border-right: 1px dashed $charcoal;
+
+      @include tablet {
+        right: 0;
+      }
+
+      @include mobile {
+        top: 0;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include mobile {
+      width: 60%;
+      overflow-x: scroll;
+    }
+  }
+
+  &__area {
+    width: 100%;
+    border-collapse: collapse;
+
+    @include mobile {
+      width: auto;
+      min-width: 100%;
+    }
+
+    & .compare-table__cell {
+      padding: 0;
+      background-image: url("../img/bullit.svg");
+      background-repeat: no-repeat;
+      background-position: left 54% center;
+
+      @include mobile {
+        min-width: 100px;
+      }
+
+      &--sm-gr,
+      &--sm-bk {
+        background-image: none;
+      }
+
+      &--minus {
+        background-image: url("../img/line.svg");
+      }
+
+      &:first-child {
+        width: 203px;
+        background-image: none;
+
+        @include tablet {
+          width: 50px;
+          min-width: 0;
+        }
+
+        @include mobile {
+          width: 0;
+        }
+      }
+
+      &:last-child {
+        width: 85px;
+        background-image: none;
+
+        @include tablet {
+          width: 30px;
+          min-width: 0;
+        }
+
+        @include mobile {
+          width: 0;
+        }
+      }
+    }
+
+    & tr {
+      height: 65px;
+    }
+
+    & tr:first-child {
+      height: 85px;
+    }
+
+    & tr:nth-child(2n) {
+      height: 60px;
+      background-color: transparentize($charcoal, 0.95);
+    }
+  }
+
+  &__cell {
+    @include text(25px, 1.2em, 400);
+
+    width: 132px;
+    padding: 0 20px;
+    border: none;
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 15px;
+    }
+
+    &--sm-gr {
+      @include text(15px, 1.2em, 400);
+
+      vertical-align: top;
+      color: transparentize($charcoal, 0.5);
+      background-image: none;
+
+      @include mobile {
+        font-size: 13px;
+      }
+    }
+
+    &--sm-bk {
+      @include text(15px, 1.2em, 400);
+
+      background-image: none;
+
+      @include mobile {
+        font-size: 13px;
+      }
+    }
+  }
+}

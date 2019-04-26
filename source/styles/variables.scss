@@ -1,0 +1,29 @@
+// Main project colors
+$white: #ffffff;
+$white-faded: rgba(255, 255, 255, 0.2);
+$yellow: #fecd46;
+$charcoal: #2c334d;
+$charcoal-faded: rgba(44, 51, 77, 0.2);
+$red: #ff0000;
+$black: #000000;
+
+// Main breakpoints:
+// should be counted down from the number and below
+// using @media (max-width: $breakpoint)
+
+// minimum width
+$width-mobile-min: 320px;
+// large mobile width
+$width-mobile-standard: 559px;
+// maximum mobile width
+$width-mobile: 767px;
+// maximum tablet width
+$width-tablet: 1023px;
+// small desktop width
+$width-desktop-start: 1439px;
+// layout width
+$width-desktop-full: 1440px;
+
+// Retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

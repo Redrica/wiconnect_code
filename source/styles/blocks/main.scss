@@ -1,0 +1,19 @@
+.main {
+  flex-grow: 1;
+
+  &--inner {
+    margin-top: -80px;
+
+    @include tablet {
+      margin-top: -77px;
+    }
+
+    @include mobile {
+      margin-top: -68px;
+    }
+  }
+
+  &--blur {
+    filter: blur(5px);
+  }
+}

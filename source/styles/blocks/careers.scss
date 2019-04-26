@@ -1,0 +1,241 @@
+.careers {
+  color: $charcoal;
+
+  & .header {
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+
+  &__intro {
+    @include mobile {
+      padding-top: 100px;
+      padding-bottom: 48px;
+    }
+
+    max-width: none;
+    padding-right: 20px;
+    padding-bottom: 93px;
+    padding-left: 20px;
+    background-image: url('../img/careers-bg.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 228px;
+
+    .section__title {
+      margin-top: 12px;
+      margin-bottom: 58px;
+      color: $yellow;
+
+      @include mobile {
+        margin-bottom: 30px;
+      }
+    }
+
+    .section__text {
+      max-width: 656px;
+
+      &:nth-of-type(1) {
+        margin-bottom: 35px;
+      }
+
+      &:nth-of-type(2) {
+        margin-bottom: 135px;
+      }
+
+      &:nth-of-type(3) {
+        max-width: 581px;
+        margin-bottom: 60px;
+      }
+
+      &:nth-child(4) {
+        max-width: 581px;
+      }
+    }
+
+    .section__subtitle {
+      &:nth-of-type(1) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &__photo {
+    margin-bottom: 84px;
+  }
+
+  &__team-members {
+    align-self: stretch;
+    max-width: none;
+    margin: 0;
+    padding-top: 120px;
+    @include mobile {
+      padding-top: 60px;
+    }
+    padding-right: 20px;
+    padding-left: 20px;
+    border-top: 1px solid $charcoal-faded;
+
+    .section__subtitle {
+      margin-bottom: 60px;
+
+      @include mobile {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 22px;
+    padding: 0;
+    list-style: none;
+
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list-item {
+    @include text(25px, 35px, 400);
+
+    flex-grow: 1;
+    width: 30%;
+    margin-bottom: 100px;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+
+    .section__text {
+      margin: 0 auto;
+    }
+
+    &:nth-child(1) {
+      flex-basis: 100%;
+
+      .section__text {
+        max-width: 553px;
+      }
+    }
+
+    &:nth-child(2) {
+      .section__text {
+        max-width: 244px;
+      }
+    }
+
+    &:nth-child(3) {
+      .section__text {
+        max-width: 377px;
+      }
+    }
+
+    &:nth-child(4) {
+      .section__text {
+        max-width: 315px;
+      }
+    }
+  }
+
+  &__positions {
+    max-width: none;
+    margin: 0;
+
+    @include mobile {
+      padding-top: 50px;
+      padding-bottom: 65px;
+    }
+
+    padding-top: 100px;
+    padding-right: 40px;
+    padding-bottom: 130px;
+    padding-left: 40px;
+    background-color: rgba(44, 51, 77, 0.04);
+
+    @include mobile-standard {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .section__subtitle {
+      margin-bottom: 80px;
+
+      @include mobile {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 480px;
+    min-height: 320px;
+    padding: 40px 40px 60px 40px;
+    text-align: left;
+    border-radius: 10px;
+    background-color: $white;
+    box-shadow: 0 8px 9px 0 rgba(0, 0, 0, 0.06);
+
+    @include mobile {
+      width: 280px;
+    }
+  }
+
+  &__slide-title {
+    margin: 0;
+    margin-bottom: 30px;
+
+    @include text(25px, 35px, 700);
+  }
+
+  &__slide-text {
+    margin: 0;
+
+    @include text(20px, 30px, 400);
+
+    color: rgba(44, 51, 77, 0.5);
+  }
+
+  &__slide-link {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    padding: 0 3px;
+
+    @include text(20px, 30px, 400);
+
+    text-decoration: none;
+    color: $charcoal;
+    border-bottom: 1px solid $yellow;
+  }
+
+  .swiper-pagination {
+    bottom: 58px;
+
+    @include mobile {
+      bottom: 28px;
+    }
+
+    & span.swiper-pagination-bullet {
+      width: 7px;
+      height: 7px;
+      margin: 0 10px;
+      background-color: $charcoal-faded;
+    }
+
+    & span.swiper-pagination-bullet-active {
+      background-color: $charcoal;
+    }
+  }
+}

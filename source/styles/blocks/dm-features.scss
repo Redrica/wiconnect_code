@@ -1,0 +1,273 @@
+// additional styling for offerings-data-monetization page
+
+.dm-features {
+  display: flex;
+  justify-content: space-between;
+
+  @include desktop-start {
+    justify-content: center;
+  }
+
+  @include tablet {
+    flex-wrap: wrap;
+  }
+
+  @include mobile-standard {
+    display: block;
+  }
+
+  &__list {
+    @include text(20px, 30px, 400);
+
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include desktop-start {
+      flex-shrink: 1;
+    }
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      font-size: 16px;
+      line-height: 1.4em;
+    }
+
+    @include mobile-standard {
+      display: block;
+    }
+
+    &:first-of-type {
+      margin-left: 120px;
+
+      @include desktop-start {
+        margin-left: 0;
+      }
+    }
+
+    &:last-of-type {
+      margin-right: 128px;
+
+      @include desktop-start {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__item {
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+
+    @include tablet {
+      width: calc(100% / 3 - 40px);
+    }
+
+    @include mobile-standard {
+      width: 100%;
+      min-height: 100px;
+      text-align: left;
+    }
+
+    &--sa {
+      max-width: 272px;
+      margin-bottom: 28px;
+      padding-top: 106px;
+      background-image: url("../img/seamless_access.svg");
+
+      @include tablet {
+        max-width: none;
+        margin-bottom: 0;
+        padding-top: 105px;
+        transform: translateY(60px);
+      }
+
+      @include mobile-standard {
+        margin-bottom: 20px;
+        padding: 0 0 0 95px;
+        background-size: 65px;
+        background-position: 0 0;
+        transform: none;
+      }
+    }
+
+    &--di {
+      max-width: 280px;
+      margin-bottom: 48px;
+      padding-top: 97px;
+      background-image: url("../img/data_integration.svg");
+
+      @include tablet {
+        max-width: none;
+        margin-bottom: 0;
+        padding-top: 105px;
+      }
+
+      @include mobile-standard {
+        margin-bottom: 20px;
+        padding: 0 0 0 95px;
+        background-size: 68px;
+        background-position: 0 0;
+      }
+    }
+
+    &--dp {
+      max-width: 224px;
+      padding-top: 119px;
+      background-image: url("../img/data_processing.svg");
+
+      @include tablet {
+        max-width: none;
+        margin-bottom: 0;
+        padding-top: 105px;
+        transform: translateY(60px);
+      }
+
+      @include mobile-standard {
+        margin-bottom: 20px;
+        padding: 0 0 0 95px;
+        background-size: 63px;
+        background-position: 0 0;
+        transform: none;
+      }
+    }
+
+    &--pd {
+      max-width: 224px;
+      margin-bottom: 23px;
+      padding-top: 102px;
+      background-image: url("../img/programmatic_deals.svg");
+
+      @include tablet {
+        max-width: none;
+        margin-bottom: 0;
+        padding-top: 105px;
+        transform: translateY(-60px);
+      }
+
+      @include mobile-standard {
+        margin-bottom: 20px;
+        padding: 0 0 0 95px;
+        background-size: 65px;
+        background-position: 6px 0;
+        transform: none;
+      }
+    }
+
+    &--cs {
+      max-width: 250px;
+      margin-bottom: 21px;
+      padding-top: 104px;
+      background-image: url("../img/custom_solutions.svg");
+
+      @include tablet {
+        max-width: none;
+        margin-bottom: 0;
+        padding-top: 105px;
+      }
+
+      @include mobile-standard {
+        margin-bottom: 20px;
+        padding: 0 0 0 95px;
+        background-size: 53px;
+        background-position: 10px 0;
+      }
+    }
+
+    &--dg {
+      max-width: 224px;
+      padding-top: 127px;
+      background-image: url("../img/data_gathering.svg");
+
+      @include tablet {
+        max-width: none;
+        margin-bottom: 0;
+        padding-top: 105px;
+        transform: translateY(-60px);
+      }
+
+      @include mobile-standard {
+        margin-bottom: 20px;
+        padding: 0 0 0 95px;
+        background-size: 50px;
+        background-position: 13px 0;
+        transform: none;
+      }
+    }
+  }
+
+  &__main {
+    flex-shrink: 0;
+    width: 471px;
+    height: 471px;
+    margin: 51px 0 0 -13px;
+    padding-top: 234px;
+    text-align: center;
+    background-image:
+      url("../img/data_monetization.svg"),
+      url("../img/circle_yellow_dashed.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 155px 126px, 0 0;
+
+    @include desktop-start {
+      align-self: center;
+      width: 400px;
+      height: 400px;
+      margin-right: 50px;
+      margin-left: 50px;
+      padding-top: 185px;
+      background-size: 35%, contain;
+      background-position: center 75px, 0 0;
+    }
+
+    @include tablet {
+      width: 80%;
+      margin-bottom: 50px;
+      padding-top: 235px;
+      background-size: 150px, contain;
+      background-position: center 70px, center;
+    }
+
+    @include mobile-standard {
+      width: 100%;
+      height: auto;
+      margin: -20px auto 35px;
+      padding-top: 150px;
+      padding-bottom: 35px;
+      background-size: 100px, contain;
+    }
+  }
+
+  &__title {
+    @include text(30px, 35px, 700);
+
+    margin: 0 0 28px;
+    color: $yellow;
+
+    @include tablet {
+      font-size: 25px;
+      line-height: 1.4em;
+    }
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__text {
+    @include text(20px, 30px, 400);
+
+    max-width: 230px;
+    margin: 0 auto;
+
+    @include tablet {
+      max-width: 220px;
+      font-size: 14px;
+      line-height: 1.4em;
+    }
+  }
+}

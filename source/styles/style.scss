@@ -1,0 +1,45 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "fonts.scss";
+@import "global.scss";
+@import "normalize.scss";
+// main blocks
+@import "blocks/footer.scss";
+@import "blocks/section.scss";
+@import "blocks/about-us.scss";
+@import "blocks/careers.scss";
+@import "blocks/contact-us.scss";
+@import "blocks/profile.scss";
+// other blocks
+@import "blocks/ae-features.scss";
+@import "blocks/button.scss";
+@import "blocks/compare-table.scss";
+@import "blocks/dm-features";
+@import "blocks/ep-features";
+@import "blocks/header.scss";
+@import "blocks/image-block.scss";
+@import "blocks/input-field.scss";
+@import "blocks/inner-page.scss";
+@import "blocks/list.scss";
+@import "blocks/login.scss";
+@import "blocks/main-menu.scss";
+@import "blocks/main.scss";
+@import "blocks/mp-features.scss";
+@import "blocks/offerings.scss";
+@import "blocks/page.scss";
+@import "blocks/popup.scss";
+@import "blocks/social.scss";
+@import "blocks/toggles.scss";
+@import "blocks/vo-features.scss";
+// main page blocks
+@import "blocks/monetization";
+@import "blocks/yellow-block";
+@import "blocks/main-page.scss";
+// @import "blocks/circle.scss";
+// @import "blocks/sub-menu.scss";
+@import "blocks/platform.scss";
+@import "blocks/join-us.scss";
+@import "blocks/horizon-slider.scss";
+@import "blocks/horizon-nav.scss";
+@import "blocks/subscribe.scss";
+@import "blocks/works.scss";

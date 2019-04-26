@@ -1,0 +1,476 @@
+// styling for pages OFFERINGS
+
+.offerings {
+  @include wrapper;
+
+  position: relative;
+  padding: 115px 40px 110px;
+  text-align: center;
+  background-color: $white;
+
+  @include tablet {
+    padding: 75px 30px 50px;
+  }
+
+  @include mobile {
+    padding: 25px 20px 50px;
+  }
+
+  &__toggles {
+    transform: translateY(203px);
+
+    @include tablet {
+      transform: translateY(180px);
+    }
+
+    @include mobile {
+      margin: 0 auto;
+      transform: translateY(28px);
+    }
+  }
+
+  &__title {
+    @include text(50px, 60px, 700);
+
+    max-width: 760px;
+    margin: 0 auto 118px;
+    color: $yellow;
+
+    @include tablet {
+      width: 75%;
+      margin-bottom: 65px;
+      font-size: 40px;
+      line-height: 1.2em;
+    }
+
+    @include mobile {
+      margin-bottom: 50px;
+      font-size: 28px;
+    }
+  }
+
+  &__text {
+    @include text(25px, 35px, 400);
+
+    max-width: 680px;
+    margin: 0 auto 70px;
+
+    @include tablet {
+      width: 75%;
+      margin-bottom: 50px;
+      font-size: 20px;
+      line-height: 1.4em;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-bottom: 35px;
+      font-size: 16px;
+    }
+  }
+
+  &__lead {
+    @include text(30px, 40px, 700);
+
+    max-width: 680px;
+    margin: 110px auto 0;
+
+    @include tablet {
+      width: 75%;
+      margin-top: 90px;
+      margin-bottom: 90px;
+      font-size: 25px;
+      line-height: 1.4em;
+
+      @include mobile {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__bm-scheme {
+    display: flex;
+    max-width: 1240px;
+    margin: 117px auto 139px;
+
+    @include desktop-start {
+      flex-direction: column;
+      margin-bottom: 100px;
+    }
+
+    @include mobile {
+      display: block;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__dm-features {
+    margin: 82px auto 137px;
+
+    @include desktop-start {
+      margin-top: 50px;
+      margin-bottom: 115px;
+    }
+
+    @include tablet {
+      margin-bottom: 70px;
+    }
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__ae-features {
+    margin: 97px auto 127px;
+
+    @include tablet {
+      margin-top: 65px;
+      margin-bottom: 90px;
+    }
+  }
+
+  &__pic-wrapper {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 338px;
+
+    @include mobile {
+      width: 65%;
+      margin: 0 auto;
+    }
+
+    @include mobile-standard {
+      width: 93%;
+    }
+
+    &--single {
+      width: 354px;
+      margin: 113px auto 0;
+
+      @include tablet {
+        margin-top: 75px;
+      }
+
+      @include mobile-standard {
+        width: 93%;
+        margin-top: 50px;
+      }
+    }
+
+    &--bg {
+      background-image: url("../../img/yellow_bracket.svg");
+      background-repeat: no-repeat;
+      background-position: center bottom 71px;
+
+      @include tablet {
+        background-position: center bottom 47px;
+      }
+
+      @include mobile {
+        background-size: 100%;
+      }
+    }
+  }
+
+  &__subtitle {
+    @include text(30px, 40px, 700);
+
+    max-width: 580px;
+    margin: 120px auto 100px;
+
+    @include tablet {
+      margin: 90px auto 70px;
+      font-size: 25px;
+      line-height: 1.4em;
+    }
+
+    @include mobile {
+      margin: 60px auto 50px;
+      font-size: 20px;
+    }
+  }
+
+  &__cp-feature {
+    display: flex;
+    justify-content: space-between;
+    max-width: 936px;
+    margin: 146px auto 0;
+    padding-top: 97px;
+    padding-left: 100px;
+    margin-bottom: 90px;
+
+    @include tablet {
+      margin-top: 0;
+      padding-top: 140px;
+      padding-right: 0;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__column {
+    max-width: 400px;
+  }
+
+  &__ep-features {
+    margin: 0 auto;
+
+    &--last {
+      margin-bottom: 157px;
+
+      @include desktop-start {
+        margin-bottom: 100px;
+
+        @include tablet {
+          margin-bottom: 65px;
+        }
+      }
+    }
+  }
+
+  &__pic-desc {
+    @include text(20px, 30px, 700);
+
+    margin: 104px auto 0;
+
+    @include tablet {
+      width: 100%;
+      margin-top: 60px;
+    }
+  }
+
+  &__link {
+    @include text(40px, 50px, 700);
+
+    position: relative;
+    display: inline-block;
+    padding: 0 10px 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.1s;
+
+    @include tablet {
+      padding-bottom: 10px;
+      font-size: 30px;
+      line-height: 1.2em;
+    }
+
+    @include mobile {
+      padding: 0 6px 7px;
+      font-size: 20px;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      outline: none;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: $yellow;
+
+      @include mobile {
+        height: 2px;
+      }
+    }
+  }
+
+  &--wifi {
+    & .offerings__image {
+      max-width: 898px;
+      margin-top: 161px;
+      margin-bottom: 178px;
+
+      @include tablet {
+        width: 95%;
+        margin-top: 90px;
+        margin-bottom: 100px;
+      }
+
+      @include mobile {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &--venue {
+    & .offerings__image {
+      max-width: 898px;
+      margin-top: 161px;
+      margin-bottom: 178px;
+
+      @include tablet {
+        width: 95%;
+        margin-top: 90px;
+        margin-bottom: 100px;
+      }
+
+      @include mobile {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+
+  }
+
+  &--based-monetization {
+    & .offerings__image {
+      max-width: 859px;
+      margin-left: -15px;
+
+      @include desktop-start {
+        width: 95%;
+        margin: 0 auto;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    & .offerings__list {
+      order: -1;
+      margin-top: 83px;
+      margin-bottom: 0;
+
+      @include desktop-start {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        order: 1;
+        margin-top: 60px;
+      }
+
+      @include mobile-standard {
+        display: block;
+        margin-top: 50px;
+      }
+    }
+
+    & .offerings__list-item {
+      @include desktop-start {
+        width: calc(100% / 2 - 20px);
+      }
+
+      @include mobile-standard {
+        width: 100%;
+      }
+    }
+  }
+
+  &--content-portal {
+    padding-bottom: 123px;
+
+    @include tablet {
+      padding-bottom: 100px;
+    }
+
+    & .offerings__image {
+      margin: -97px 0 0;
+
+      @include tablet {
+        width: 45%;
+        margin-top: -100px;
+      }
+
+      @include mobile {
+        width: 90%;
+        margin-top: 30px;
+        margin-bottom: 65px;
+      }
+    }
+
+    & .offerings__link {
+      margin-top: 31px;
+    }
+  }
+
+  &--audience-extension {
+    & .offerings__lead {
+      margin-top: 100px;
+
+      @include tablet {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.offerings-venue-features {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 80px;
+
+  &__item {
+    position: relative;
+    text-align: left;
+    margin-left: 25px;
+    @include text(15px, 20px, 400);
+    width: 12%;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: center;
+
+    &__item {
+      width: 40%;
+      margin-left: 180px;
+
+    }
+  }
+
+  @include mobile {
+    &__item {
+      margin-left: 70px;
+      width: 70%;
+
+    }
+  }
+
+}
+
+.offerings-venue-features__item-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  @include text(30px, 20px, 400);
+  left: -70px;
+  border-radius: 50%;
+  background-color: $yellow;
+}

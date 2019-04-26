@@ -1,0 +1,77 @@
+// additional styling for services-managed-providers page
+
+.mp-features {
+  counter-reset: number;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 303px;
+    max-width: 378px;
+    min-height: 145px;
+    margin-bottom: 73px;
+
+    @include tablet {
+      flex-grow: 1;
+      width: 338px;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin: 0 auto 30px;
+    }
+
+    &::before {
+      content: counter(number);
+      counter-increment: number;
+      width: 145px;
+      height: 145px;
+      font-size: 120px;
+      line-height: 145px;
+      vertical-align: middle;
+      color: $white;
+      border-radius: 50%;
+      background-color: $yellow;
+
+      @include tablet {
+        width: 120px;
+        height: 120px;
+        font-size: 90px;
+        line-height: 120px;
+      }
+    }
+  }
+
+  &__title {
+    @include text(25px, 1.2em, 400);
+
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 352px;
+    margin: -144px 0 0;
+    text-align: center;
+
+    @include desktop-start {
+      max-width: 300px;
+    }
+
+    @include tablet {
+      max-width: 338px;
+      font-size: 20px;
+    }
+
+    @include mobile {
+      max-width: 375px;
+    }
+  }
+}

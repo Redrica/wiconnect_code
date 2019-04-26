@@ -1,0 +1,43 @@
+// additional styling for offerings-enhanced-portal page
+
+.ep-features {
+  display: flex;
+  justify-content: space-between;
+  max-width: 832px;
+
+  @include mobile {
+    display: block;
+  }
+
+  &__list {
+    order: -1;
+    max-width: 360px;
+    margin: 21px 0 0;
+
+    @include mobile {
+      max-width: none;
+      margin-top: 45px;
+    }
+  }
+
+  &--wide {
+    max-width: 1080px;
+
+    & .ep-features__list {
+      max-width: 645px;
+
+      @include desktop-start {
+        flex-grow: 1;
+        width: 326px;
+        max-width: 560px;
+        margin-right: 40px;
+      }
+
+      @include mobile {
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
+      }
+    }
+  }
+}

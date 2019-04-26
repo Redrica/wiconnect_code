@@ -1,0 +1,103 @@
+// additional styling for offerings-audience-extension page
+
+.ae-features {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+
+  @include tablet {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include mobile-standard {
+    display: block;
+  }
+
+  &__item {
+    width: 25%;
+    padding-top: 208px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center 0;
+
+    @include desktop-start {
+      width: calc(100% / 4 - 20px);
+    }
+
+    @include tablet {
+      width: 40%;
+      margin-bottom: 40px;
+      padding-top: 150px;
+      background-size: 120px;
+    }
+
+    @include mobile {
+      width: 50%;
+    }
+
+    @include mobile-standard {
+      width: 100%;
+    }
+
+    &--ab {
+      background-image: url("../img/audience_buying.svg");
+
+      @include tablet {
+        order: -2;
+      }
+    }
+
+    &--la {
+      background-image: url("../img/look_alike.svg");
+    }
+
+    &--r {
+      background-image: url("../img/retargeting.svg");
+
+      @include tablet {
+        order: -1;
+      }
+    }
+
+    &--cdm {
+      background-image: url("../img/cross_device_management.svg");
+    }
+  }
+
+  &__title {
+    @include text(25px, 35px, 700);
+
+    max-width: 300px;
+    margin: 0 auto 61px;
+
+    @include tablet {
+      margin-bottom: 30px;
+      font-size: 20px;
+      line-height: 1.4em;
+    }
+  }
+
+  &__text {
+    @include text(20px, 30px, 400);
+
+    max-width: 224px;
+    margin: 0 auto;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 1.4em;
+    }
+  }
+
+  &__list {
+    max-width: 224px;
+    margin: 0 auto;
+
+    @include mobile-standard {
+      max-width: none;
+      column-count: 2;
+    }
+  }
+}

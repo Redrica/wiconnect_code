@@ -1,0 +1,181 @@
+.horizon-slider {
+  position: relative;
+  z-index: 2;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100vw;
+  height: 91vh;
+  background-color: $white;
+  overflow: hidden;
+
+  &__controls {
+    @include mobile {
+      display: flex;
+      padding: 0;
+    }
+
+    display: none;
+    position: absolute;
+    justify-content: space-between;
+    padding: 0 5%;
+    top: 50%;
+    left: 0;
+    width: 100vw;
+  }
+
+  &__controls button {
+    height: 35px;
+    width: 35px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 10;
+    background-position: center;
+
+    @include mobile {
+      height: 35px;
+      width: 25px;
+    }
+
+  }
+
+  &__controls button:hover,
+  &__controls button:active,
+  &__controls button:focus {
+    outline: none;
+  }
+
+  &__controls button:hover {
+    transition-duration: 0.2s;
+    transform: scale(1.2);
+  }
+  &__controls button:first-child {
+    background-image: url(../img/arrow_dark_left.svg);
+
+  }
+
+  &__controls button:last-child {
+    background-image: url(../img/arrow_dark_right.svg);
+
+  }
+
+}
+.horizon-slider:hover .horizon-slider__controls {
+  display: flex;
+}
+
+.horizon-slider__content {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 600vw;
+  overflow: hidden;
+  text-align: center;
+  @include mobile {
+    top: 0;
+  }
+}
+
+
+.horizon-slider__item {
+  height: 640px;
+  width: 100vw;
+  padding: 0 20vw;
+  justify-content: space-between;
+  align-content: center;
+
+
+    @include mobile {
+      padding: 0 10vw;
+      width: 100vw;
+      height: 640px;
+    }
+
+  }
+
+.horizon-slider__title {
+  margin-bottom: 60px;
+
+  @include text(60px, 70px, 400);
+
+
+  @include tablet {
+    font-size: 40px;
+    line-height: 1.4em;
+  }
+
+  @include mobile {
+    @include text(40px, 30px, 400);
+    margin-top: 10vh;
+    font-size: 22px;
+  }
+}
+
+.horizon-slider__text {
+  @include text(30px, 40px, 400);
+
+  @include tablet {
+    font-size: 25px;
+    line-height: 1.4em;
+  }
+
+  @include mobile {
+    font-size: 16px;
+  }
+
+  margin-bottom: 40px;
+}
+
+.horizon-slider__link {
+  @include text(20px, 70px, 400);
+  @include mobile {
+    font-size: 16px;
+  }
+  position: relative;
+  transition: 0.1s;
+  text-decoration: none;
+  color: $charcoal;
+
+  &::after {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $charcoal;
+
+    @include mobile {
+      height: 2px;
+    }
+
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    outline: none;
+  }
+}
+
+.horizon-slider__item:first-child,
+.horizon-slider__item:last-child {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 20vw;
+
+    @include mobile {
+      // margin-left: 0;
+      // padding: 0 10vw;
+
+      & h2 {
+        margin: 0;
+        margin-bottom: 15vh;
+      }
+    }
+
+  }

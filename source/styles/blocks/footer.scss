@@ -1,0 +1,56 @@
+.footer {
+  min-width: 320px;
+  padding: 97px 0 45px;
+  border-top: 1px solid $white-faded;
+  background-color: $charcoal;
+
+  @include tablet {
+    padding: 50px 0 30px;
+  }
+
+  &__inner {
+    @include wrapper;
+
+    min-width: auto;
+    padding: 0 40px;
+
+    @include tablet {
+      padding: 0 30px;
+    }
+
+    @include mobile {
+      padding: 0 20px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 62px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__social {
+    margin: 0 auto 83px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__copyright {
+    @include text(20px, 30px, 400);
+
+    margin: 0;
+    text-align: center;
+    color: transparentize($white, 0.7);
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 1.4em;
+    }
+  }
+}

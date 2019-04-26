@@ -1,0 +1,85 @@
+// additional styling for services-venue-owners page
+
+.vo-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+
+  @include tablet {
+    justify-content: center;
+  }
+
+  @include mobile-standard {
+    display: block;
+  }
+
+  &__item {
+    width: 20%;
+    max-width: 250px;
+    padding-top: 194px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center 0;
+
+    @include desktop-start {
+      width: calc(100% / 5 - 25px);
+      max-width: none;
+    }
+
+    @include tablet {
+      width: 40%;
+      margin-bottom: 50px;
+      padding-top: 150px;
+      background-size: 120px;
+    }
+
+    @include mobile {
+      width: 50%;
+    }
+
+    @include mobile-standard {
+      width: 100%;
+    }
+
+    &--ig {
+      background-image: url("../img/information_gathering.svg");
+    }
+
+    &--hf {
+      background-image: url("../img/highlevel_forecast.svg");
+    }
+
+    &--pa {
+      background-image: url("../img/proposal_acceptance.svg");
+    }
+
+    &--id {
+      background-image: url("../img/integration_deployment.svg");
+    }
+
+    &--ma {
+      background-image: url("../img/monetization_activation.svg");
+    }
+  }
+
+  &__title {
+    @include text(25px, 35px, 700);
+
+    margin: 0 auto;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 1.4em;
+    }
+
+    &--narrow {
+      max-width: 220px;
+
+      @include mobile {
+        max-width: none;
+      }
+    }
+  }
+}

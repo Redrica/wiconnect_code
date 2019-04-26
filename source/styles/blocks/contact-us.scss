@@ -1,0 +1,255 @@
+.contact-us {
+  & .header {
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    & .main-menu__link {
+      color: $white;
+    }
+  }
+
+  & .header__logo--colored {
+    display: none;
+  }
+
+  & .header__logo--white {
+    display: block;
+  }
+
+  & .header__burger {
+    background-color: $white;
+
+    &::before,
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  & .main {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $charcoal;
+    background-image: url('../img/contact-us-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+
+  &__intro {
+    width: 100%;
+    padding-right: 20px;
+    padding-bottom: 98px;
+    padding-left: 20px;
+
+    @include mobile {
+      padding-top: 100px;
+      padding-bottom: 49px;
+    }
+
+    .section__title {
+      margin-top: 12px;
+      margin-bottom: 58px;
+      color: $yellow;
+    }
+
+    .section__text {
+      max-width: 560px;
+      color: $white;
+
+      &:first-of-type {
+        margin-bottom: 36px;
+      }
+    }
+  }
+
+  &__send-message {
+    width: 50%;
+    padding-top: 86px;
+    padding-right: 20px;
+    padding-bottom: 58px;
+    padding-left: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+    @include mobile {
+      padding-top: 43px;
+      padding-bottom: 29px;
+    }
+
+    @include tablet {
+      flex-basis: 100%;
+      border: 0;
+    }
+    .section__title {
+      margin-bottom: 59px;
+      @include text(30px, 40px, 700);
+      color: $yellow;
+    }
+
+    .form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 500px;
+
+      &__input {
+        width: 240px;
+        min-height: 40px;
+        margin-bottom: 16px;
+        padding-bottom: 5px;
+        border: 0;
+        border-bottom: 2px solid $yellow;
+        color: $white;
+        background-color: transparent;
+        outline: none;
+
+        @include text(20px, 40px, 400);
+
+        @include tablet {
+          width: 100%;
+        }
+
+        &::placeholder {
+          color: $white;
+          opacity: 1;
+        }
+
+        &:last-of-type {
+          width: 100%;
+          margin-bottom: 60px;
+        }
+      }
+
+      &__submit {
+        width: 170px;
+        margin: 0 auto;
+
+        @include text(20px, 45px, 700);
+
+        padding: 0;
+        border: 0;
+      }
+    }
+  }
+
+  &__contacts {
+    width: 50%;
+    padding-top: 86px;
+    padding-bottom: 115px;
+
+    @include mobile {
+      padding-top: 43px;
+      padding-bottom: 58px;
+    }
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    @include tablet {
+      flex-basis: 100%;
+    }
+
+    .section__title {
+      margin-bottom: 60px;
+
+      @include text(30px, 40px, 700);
+
+      color: $yellow;
+
+      @include mobile {
+        margin-bottom: 30px;
+      }
+    }
+
+    .section__text {
+      max-width: 346px;
+      line-height: 45px;
+      color: $white;
+
+      &:first-of-type {
+        margin-bottom: 46px;
+
+        @include mobile {
+          margin-bottom: 23px;
+        }
+      }
+    }
+
+    .section__link {
+      display: block;
+      text-decoration: none;
+      color: $white;
+      transition: transform 0.1s linear;
+
+      &:hover {
+        color: $yellow;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .popup--submit {
+    background-color: rgba(44, 51, 77, 0.5);
+  }
+
+  .submit {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    align-items: center;
+    color: $charcoal;
+    transform: translate(-50%, -54%);
+    border-radius: 10px;
+    background-color: $white;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0 8px 9px 0 rgba(0, 0, 0, 0.06);
+
+    @include mobile {
+      width: 90%;
+      max-width: none;
+    }
+
+    &__close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      border: none;
+      background: url("../img/close.svg") no-repeat center center;
+      cursor: pointer;
+      -webkit-appearance: none;
+      transition: 0.2s linear;
+
+      @include mobile {
+        top: 27px;
+        right: 31px;
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+        transform: scale(1.2);
+      }
+    }
+
+    &__text {
+      @include text(30px,
+      40px,
+      700);
+      max-width: 274px;
+    }
+  }
+}
+
+.stop-scroll {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}

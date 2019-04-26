@@ -1,0 +1,230 @@
+.profile {
+
+  .header {
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+
+  .main {
+    @include wrapper;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 0 40px;
+    @include mobile {
+      padding: 0 20px;
+    }
+  }
+
+  &__greeting {
+    width: 100%;
+    padding-top: 139px;
+    padding-bottom: 100px;
+    align-items: flex-start;
+    @include mobile {
+      padding-top: 90px;
+      padding-bottom: 50px;
+    }
+  }
+
+  .section {
+    min-width: 280px;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .section__title {
+    color: $yellow;
+  }
+
+  .section__subtitle {
+    margin-bottom: 60px;
+    @include text(15px, 25px, 400);
+    opacity: 0.5;
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__my-files {
+    width: 50%;
+    padding-top: 0;
+    padding-bottom: 60px;
+    @include mobile {
+      padding-bottom: 0;
+    }
+    align-items: flex-start;
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__upload-input {
+    display: none;
+  }
+
+  &__shared-files {
+    width: 50%;
+    padding-top: 0;
+    align-items: flex-start;
+  }
+
+  & &__button {
+    padding: 0;
+    padding-left: 36px;
+    line-height: 45px;
+  }
+
+  &__button {
+    position: relative;
+    width: 200px;
+    box-shadow: 0 8px 9px 0 rgba(0, 0, 0, 0.06);
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 21px;
+      left: 62px;
+      background-color: $yellow;
+    }
+
+    &::before {
+      width: 16px;
+      height: 2px;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      width: 2px;
+      height: 16px;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.file-list {
+  min-width: 400px;
+  margin: 0;
+  margin-bottom: 120px;
+  padding: 0;
+  list-style: none;
+  @include tablet {
+    min-width: auto;
+  }
+  @include mobile {
+    margin-bottom: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+
+    &--loading {
+      min-height: 80px;
+      align-items: flex-start;
+
+      .file-list__filesize {
+        display: none;
+      }
+
+      .file-list__delete {
+        display: none;
+      }
+
+      .file-list__process {
+        display: block;
+      }
+    }
+  }
+
+  &__filepic {
+    margin-right: 20px;
+    width: 34px;
+    height: 34px;
+    @include mobile {
+      margin-right: 10px;
+    }
+  }
+
+  &__filename {
+    @include text(25px, 35px, 400);
+    margin-right: 20px;
+    @include mobile {
+      margin-right: 10px;
+    }
+  }
+
+  &__filesize {
+    @include text(15px, 25px, 400);
+    margin-right: 20px;
+    opacity: 0.5;
+    @include mobile {
+      margin-right: 10px;
+    }
+  }
+
+  &__delete {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin-left: auto;
+    font-size: 0;
+    border: 0;
+    background-color: transparent;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+    &::before, &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+      background-color: $charcoal-faded;
+    }
+
+    &::before {
+      width: 15px;
+      height: 2px;
+    }
+
+    &::after {
+      width: 2px;
+      height: 15px;
+    }
+  }
+
+  &__process {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+  }
+
+  &__progress {
+    width: 264px;
+    height: 4px;
+    background-color: rgba(44, 51, 77, 0.1);
+    border: 0;
+    color: $yellow;
+    &::-moz-progress-bar {
+      background: $yellow;
+    }
+    &::-webkit-progress-value {
+      background: $yellow;
+    }
+  }
+
+  &__percent {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    @include text(15px, 25px, 400);
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,175 @@
+.platform {
+  position: relative;
+  z-index: 30;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 100vw;
+  padding-top: 140px;
+  padding-left: calc((100% - 1440px) / 2);
+  padding-right: calc((100% - 1440px) / 2);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  background-color: $charcoal;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    content: "";
+    display: block;
+    border: 1px solid $yellow;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 3s;
+    transform: translate(-50%, -50%) scale(0);
+    @include mobile {
+      display: none;
+    }
+
+  }
+
+  &::before {
+    width: 115vw;
+    height: 115vw;
+  }
+
+  &::after {
+    width: 65vw;
+    height: 65vw;
+  }
+
+  &--active {
+    &::before,
+    &::after {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  @include tablet {
+    justify-content: space-around;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 25px;
+    background-color: $charcoal;
+  }
+}
+
+.platform__title {
+  @include text(25px, 35px, 700);
+
+  padding-bottom: 30px;
+  @include mobile {
+    margin: 0;
+  }
+}
+
+.platform__text {
+  padding-bottom: 40%;
+  color: rgba(255, 255, 255, 0.4);
+  @include tablet {
+    padding-bottom: 0;
+  }
+}
+
+.platform__link {
+  @include tablet {
+    bottom: -40px;
+  }
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  display: block;
+
+  @include text(20px, 30px, 300);
+
+  text-decoration: none;
+  color: $white-faded;
+  transition: 0.1s;
+  transform: translateX(-50%);
+
+  &::after {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $white-faded;
+    transition: 0.2s;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+
+    &::after {
+      background-color: $yellow;
+    }
+  }
+}
+
+.platform__header {
+  color: $white;
+  padding: 0 25%;
+
+  margin-bottom: 100px;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.29;
+  @include mobile {
+    @include text(22px, 30px, 300);
+    padding: 0 10%;
+  }
+}
+
+
+.platform__feature {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 320px;
+  height: 300px;
+  margin-right: 60px;
+  margin-bottom: 160px;
+  margin-left: 60px;
+  padding-top: 130px;
+  color: $white;
+  @include tablet {
+    margin-left: 30px;
+    margin-right: 30px;
+    height: auto;
+  }
+  &--wf {
+    background: url("../img/wi-fi-access.svg") 50% 0 no-repeat;
+  }
+
+  &--abm {
+    background: url("../img/a-based-monetization.svg") 50% 0 no-repeat;
+  }
+
+  &--da {
+    background: url("../img/data-monetization.svg") 50% 0 no-repeat;
+  }
+
+  &--ae {
+    background: url("../img/audience-extension.svg") 50% 0 no-repeat;
+  }
+
+  &--cp {
+    background: url("../img/content-portal.svg") 50% 0 no-repeat;
+  }
+
+  &--app {
+    background: url("../img/enhanced-portal-with-app-sdk.svg") 50% 0 no-repeat;
+  }
+}

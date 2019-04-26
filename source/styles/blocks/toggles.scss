@@ -1,0 +1,42 @@
+// arrow-buttons in the header or container
+
+.toggles {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    width: 17px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+
+    @include mobile {
+      width: 12px;
+      height: 23px;
+      background-size: cover;
+    }
+
+    &--prev-white {
+      background-image: url("../img/arrow_light_left.svg");
+    }
+
+    &--next-white {
+      background-image: url("../img/arrow_light_right.svg");
+    }
+
+    &--prev {
+      background-image: url("../img/arrow_dark_left.svg");
+    }
+
+    &--next {
+      background-image: url("../img/arrow_dark_right.svg");
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,259 @@
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    @include text(25px, 35px, 400);
+
+    text-decoration: none;
+    color: $charcoal;
+    transition: 0.1s;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 1.4em;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      color: $white;
+    }
+
+    &--serve,
+    &--offer {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--serve-mobile,
+    &--offer-mobile {
+      display: none;
+
+      @include mobile {
+        display: inline;
+      }
+    }
+  }
+
+  &__submenu {
+    position: absolute;
+    top: 62px;
+    display: none;
+
+    &--opened {
+      display: flex;
+    }
+
+    &--services {
+      left: -340px;
+      width: 785px;
+    }
+
+    &--offerings {
+      left: -473px;
+      width: 1300px;
+
+      @include desktop-start {
+        left: -326px;
+        width: 1000px;
+      }
+
+      @include tablet {
+        left: -235px;
+        width: 728px;
+      }
+
+      & .main-menu__item {
+        @include desktop-start {
+          max-width: 114px;
+          text-align: center;
+        }
+
+        @include tablet {
+          max-width: 100px;
+        }
+      }
+    }
+  }
+
+  &--white {
+    & .main-menu__link {
+      color: $white;
+    }
+  }
+
+  &--header {
+    & .main-menu__item:not(:last-child) {
+      margin-right: 66px;
+
+      @include desktop-start {
+        margin-right: 45px;
+      }
+
+      @include tablet {
+        margin-right: 25px;
+      }
+
+      @include mobile {
+        margin-right: 0;
+      }
+    }
+
+    & .main-menu__link {
+      @include text(15px, 25px, 700);
+
+      @include tablet {
+        font-size: 13px;
+        line-height: 1.4em;
+      }
+
+      &:hover,
+      &:focus {
+        color: $yellow;
+        outline: none;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+
+      &--active {
+        position: relative;
+        cursor: default;
+
+        &::after {
+          position: absolute;
+          bottom: -15px;
+          left: 0;
+          content: "";
+          width: 100%;
+          height: 3px;
+          background-color: $yellow;
+        }
+
+        &:hover {
+          color: $charcoal;
+        }
+      }
+    }
+
+    &.main-menu--white .main-menu__link--active:hover {
+      color: $white;
+    }
+
+    & .main-menu__submenu .main-menu__link {
+      display: block;
+      padding: 15px 0 15px;
+
+      &--active::after {
+        bottom: 5px;
+      }
+    }
+
+    &.main-menu__submenu .main-menu__item:not(:last-child) {
+      margin-right: 54px;
+
+      @include desktop-start {
+        margin-right: 35px;
+      }
+
+      @include tablet {
+        margin-right: 10px;
+      }
+    }
+
+    @include mobile {
+      display: none;
+
+      & .main-menu__item {
+        margin-bottom: 25px;
+      }
+
+      & .main-menu__link {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 40px;
+
+        &:hover[href],
+        &:focus {
+          outline: none;
+          opacity: 0.5;
+        }
+
+        &:active {
+          opacity: 0.8;
+        }
+
+        &--active {
+          font-weight: 700;
+          color: $yellow;
+
+          &::after {
+            content: none;
+          }
+
+          &:hover,
+          &:focus {
+            color: $yellow;
+          }
+        }
+      }
+    }
+  }
+
+  &--footer {
+    @include mobile-standard {
+      display: block;
+      text-align: center;
+    }
+
+    & .main-menu__item {
+      margin-bottom: 20px;
+    }
+
+    & .main-menu__item:not(:last-child) {
+      margin-right: 7.639%;
+
+      @include mobile {
+        margin-right: 35px;
+      }
+
+      @include mobile-standard {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    & .main-menu__link {
+      color: $white;
+
+      &:hover[href],
+      &:focus {
+        outline: none;
+        opacity: 0.5;
+      }
+
+      &:active[href] {
+        opacity: 0.2;
+      }
+
+      // active menu item within footer menu
+      &--active {
+        color: $yellow;
+        cursor: default;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

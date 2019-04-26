@@ -1,0 +1,44 @@
+.social {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 80px;
+
+      @include mobile {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 0;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      outline: none;
+    }
+
+    &--facebook {
+      background-image: url("../img/facebook.svg");
+    }
+
+    &--linkedin {
+      background-image: url("../img/linked-in.svg");
+    }
+
+    &--twitter {
+      background-image: url("../img/twitter.svg");
+    }
+  }
+}
